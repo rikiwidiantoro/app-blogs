@@ -32,7 +32,7 @@
                     <ul class="navbar-nav">
                         <a class="nav-link mx-3" href="/home">Home</a>
                         <a class="nav-link mx-3" href="/artikel">Artikel</a>
-                        <a class="nav-link mx-3" href="/category">Kategori</a>
+                        <a class="nav-link mx-3" href="/kategori">Kategori</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -8,6 +8,7 @@
         <div class="col-md-10">
           <article class="mb-5">
             <h2>{{ $artikel->title }}</h2>
+            <p>Kategori = {{ $artikel->category->name }}</p>
             <figure>{{ $artikel->image }}</figure>
             <p>{{ $artikel->content }}</p>
             <div class="aksi">

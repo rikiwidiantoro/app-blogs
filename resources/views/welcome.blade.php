@@ -46,7 +46,7 @@
                             <blockquote class="blockquote">
                                 <h3>Membangun Blog Sederhana Menggunakan laravel Blade serta Laravel UI</h3>
                             </blockquote>
-                            <figcaption class="blockquote-footer">Riki Widiantoro | Ponorogo</figcaption>
+                            {{-- <figcaption class="blockquote-footer">Riki Widiantoro | Ponorogo</figcaption> --}}
                         </figure>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="row">
                     <div class="col log mt-5">
-                        <p style="color:white; font-size:12px; margin-top:250px; text-align:center;">jika ingin langsung login gunakan email : qwerty@aa.com dan password : qwertyuiop</p>
+                        <p style="color:white; font-size:12px; margin-top:290px; text-align:center;">&copy; Riki Widiantoro | Ponorogo</p>
                     </div>
                 </div>
             </div>

@@ -24,3 +24,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/artikel', [App\Http\Controllers\ArticleController::class, 'index']);
+Route::get('/kategori', [App\Http\Controllers\CategoryController::class, 'index']);
