@@ -75,6 +75,11 @@
                         @endif
                     {{-- </div> --}}
                 </div>
+                <div class="row">
+                    <div class="col log mt-5">
+                        <p style="color:white; font-size:12px; margin-top:250px; text-align:center;">jika ingin langsung login gunakan email : qwerty@aa.com dan password : qwertyuiop</p>
+                    </div>
+                </div>
             </div>
         </section>
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
