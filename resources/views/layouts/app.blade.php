@@ -31,8 +31,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav">
                         <a class="nav-link mx-3" href="/home">Home</a>
-                        <a class="nav-link mx-3" href="/artikel">Artikel</a>
-                        <a class="nav-link mx-3" href="/kategori">Kategori</a>
+                        {{-- <a class="nav-link mx-3" href="/artikel">Artikel</a>
+                        <a class="nav-link mx-3" href="/kategori">Kategori</a> --}}
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -51,6 +51,8 @@
                                 </li>
                             @endif
                         @else
+                            <a class="nav-link mx-3" href="/artikel">Artikel</a>
+                            <a class="nav-link mx-3" href="/kategori">Kategori</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

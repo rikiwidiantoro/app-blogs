@@ -3,27 +3,42 @@
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
-    @foreach($categories as $kategori)
-      <div class="col-md-10 border-bottom">
-        <article class="my-3">
-          <div class="row">
-            <div class="col-md-1">
-              <h4>{{ $kategori->id }}.</h4>
-            </div>
-            <div class="col-md-3">
-              <h4>{{ $kategori->name }}</h4>
-            </div>
-            <div class="col-md-3">
+    <div class="col-md-10">
+      <a href="/kategori/create">
+        <button type="button" class="btn btn-primary btn-sm">Tambah Kategori</button>
+      </a>
+      <table class="table mt-3">
+        <tr>
+          <th>No</th>
+          <th>Nama Kategori</th>
+          <th>Judul Artikel</th>
+          <th colspan="2">Aksi</th>
+        </tr>
+        @foreach($categories as $kategori)
+          <tr>
+            <td>{{ $kategori->id }}</td>
+            <td>{{ $kategori->name }}</td>
+            <td>
               @foreach($kategori->article as $ar)
-              <ul>
-                <li>{{ $ar->title }}</li>
-              </ul>
+              <li>{{ $ar->title }}</li>
               @endforeach
-            </div>
-          </div>
-        </article>
-      </div>
-    @endforeach
+            </td>
+            <td>
+              <a href="/kategori/<?=$kategori->id?>/edit">
+                <button type="button" class="btn btn-warning btn-sm">Edit</button>
+              </a>
+            </td>
+            <td>
+              <form action="/kategori/<?=$kategori->id?>" method="POST">
+                @csrf
+                @method('delete')
+                <input type="submit" class="btn btn-danger btn-sm" value="Hapus">
+              </form>
+            </td>
+          </tr>
+        @endforeach
+      </table>
+    </div>
   </div>
 </div>
 @endsection

@@ -19,8 +19,8 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->sentence(mt_rand(3,6)),
             'content' => $this->faker->paragraph(mt_rand(2,4)),
-            'image' => $this->faker->sentence(mt_rand(1)),
-            'category_id'
+            'image' => $this->faker->word().'.jpg',
+            'category_id' => mt_rand(1,2)
         ];
     }
 }

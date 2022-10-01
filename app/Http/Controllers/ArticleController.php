@@ -12,4 +12,31 @@ class ArticleController extends Controller
             'articles' => Article::all()
         ]);
     }
+    public function create() {
+        return view('artikel.tambah');
+    }
+    public function store(Request $request) {
+        // dd($request->all());
+        // dd($request->except('_token', 'submit'));
+        Article::create($request->except(['_token', 'submit']));
+        return redirect('/artikel');
+    }
+    public function edit($id) {
+        // dd($id);
+        $datas = Article::find($id);
+        // dd($datas);
+        return view('artikel.edit', compact(['datas']));
+    }
+    public function update($id, Request $request) {
+        // dd($id);
+        $datas = Article::find($id);
+        // dd($datas);
+        $datas->update($request->except(['_token', 'submit']));
+        return redirect('/artikel');
+    }
+    public function destroy($id) {
+        $datas = Article::find($id);
+        $datas->delete();
+        return redirect('/artikel');
+    }
 }
