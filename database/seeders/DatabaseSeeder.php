@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'qwerty@aa.com',
             'password' => bcrypt('qwertyuiop')
         ]);
-        Article::factory(4)->create();
+        Article::factory(10)->create();
         // Article::create([
         //     'title' => 'Judul Pertama',
         //     'content' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam magnam molestiae tenetur. Cupiditate quam exercitationem quae laborum doloremque dolores quod?',
@@ -55,6 +55,9 @@ class DatabaseSeeder extends Seeder
         ]);
         Category::create([
             'name' => 'Kategori Dua',
+        ]);
+        Category::create([
+            'name' => 'Kategori Tiga',
         ]);
     }
 }
